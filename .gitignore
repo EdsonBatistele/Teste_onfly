@@ -1,0 +1,25 @@
+# Ambientes virtuais
+venv/
+.env/
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Dados e logs
+data/
+logs/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Jupyter/VSCode
+.ipynb_checkpoints/
+.vscode/
+
+# Relatórios e imagens
+*.csv
+*.png
