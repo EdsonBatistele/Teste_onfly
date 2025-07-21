@@ -67,5 +67,5 @@ pip install -r requirements.txt
 
 4. Execute o código:
 ```bash
-python main.py# Teste_onfly
+python main.py
 ```
