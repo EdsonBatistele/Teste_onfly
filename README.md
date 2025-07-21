@@ -52,11 +52,11 @@ cd Teste_onfly
 
 ```bash
 # Linux/macOS
-python -m venv venv
+source venv/bin/activate
 
 # Windows
-source venv/bin/activate
-venv\Scripts\activate
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 ```
 
 3. Instale as dependências:
