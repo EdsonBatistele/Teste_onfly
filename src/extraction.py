@@ -18,7 +18,7 @@ def get_pokemons(limit=100, offset=0):
     Returns:
         list: Lista de dicionários contendo o nome e a URL de cada Pokémon.
     """
-    url = f"https://pokeapi.co/api/v2/pokemon?limit=100&offset=0"
+    url = f"https://pokeapi.co/api/v2/pokemon?limit={limit}&offset={offset}"
     response = requests.get(url)
     response.raise_for_status()
     return response.json()["results"]

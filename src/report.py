@@ -33,16 +33,22 @@ def build_graph(tipo_df, path="data/grafico_tipos.png"):
     logging.info("Gerando gráfico de distribuição por tipo...")
     plt.figure(figsize=(14, 7))
     ax = sns.barplot(x="Tipo", y="Quantidade", data=tipo_df, palette="viridis")
-    
+
     for p in ax.patches:
         height = p.get_height()
-        ax.annotate(f'{height}', (p.get_x() + p.get_width() / 2., height),
-                    ha='center', va='bottom', fontsize=10, color='black')
-    
-    plt.xticks(rotation=45, ha='right')
+        ax.annotate(
+            f"{height}",
+            (p.get_x() + p.get_width() / 2.0, height),
+            ha="center",
+            va="bottom",
+            fontsize=10,
+            color="black",
+        )
+
+    plt.xticks(rotation=45, ha="right")
     plt.ylabel("Quantidade")
     plt.xlabel("Tipo")
-    plt.title("Distribuição de Pokémons por Tipo", fontsize=16, weight='bold')
+    plt.title("Distribuição de Pokémons por Tipo", fontsize=16, weight="bold")
     plt.tight_layout()
     plt.savefig(path, dpi=300)
     plt.close()
